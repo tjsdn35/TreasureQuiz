@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보물섬 퀴즈 탐험</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 24px; font-family: Arial, sans-serif; background: #f7f3e8; color: #26352e; }
+        .game-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+        .score-badge { padding: 12px 18px; background: #fff2bf; border: 2px solid #d49b24; border-radius: 999px; font-weight: bold; }
+        #restart-button, .choice-button { padding: 10px 16px; border: 0; border-radius: 10px; background: #286b58; color: white; font-size: 16px; cursor: pointer; }
+        .quiz-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; grid-auto-rows: 130px; }
+        .treasure-card { min-width: 0; border: 3px solid #8b4513; border-radius: 16px; background: #f6c445; font-size: 20px; font-weight: bold; cursor: pointer; }
+        .treasure-card.special { grid-column: span 2; background: #ffdf70; border-color: #c48612; }
+        .treasure-card.solved { opacity: 0.55; background: #d8e8d5; }
+        .progress-text { font-weight: bold; }
+        .question-panel { margin-top: 24px; padding: 20px; background: white; border: 2px solid #d7c6a5; border-radius: 18px; }
+        #choices { display: flex; flex-wrap: wrap; gap: 10px; }
+        .choice-button:disabled { opacity: 0.5; cursor: not-allowed; }
+        @media (max-width: 600px) { body { padding: 16px; } .quiz-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .game-header { align-items: flex-start; } }
+    </style>
+</head>
+<body>
+    <header class="game-header">
+        <h1>🏝️ 보물섬 퀴즈 탐험</h1>
+        <div class="score-badge">⭐ 점수 <span id="score">0</span>점</div>
+        <button id="restart-button">🔄 새 게임</button>
+    </header>
+    <main class="quiz-grid">
+        <button class="treasure-card special" data-index="0">🎁 황금 보물</button>
+        <button class="treasure-card" data-index="1">🎁 보물 2</button>
+        <button class="treasure-card" data-index="2">🎁 보물 3</button>
+        <button class="treasure-card" data-index="3">🎁 보물 4</button>
+        <button class="treasure-card" data-index="4">🎁 보물 5</button>
+        <button class="treasure-card" data-index="5">🎁 보물 6</button>
+        <button class="treasure-card" data-index="6">🎁 보물 7</button>
+        <button class="treasure-card" data-index="7">🎁 보물 8</button>
+        <button class="treasure-card" data-index="8">🎁 보물 9</button>
+    </main>
+    <p class="progress-text">완료한 문제: <span id="solved-count">0</span> / 9</p>
+    <section class="question-panel">
+        <h2>🧩 오늘의 퀴즈</h2>
+        <p id="question-text">보물상자를 선택해 문제를 시작해!</p>
+        <div id="choices"></div>
+        <p id="feedback"></p>
+    </section>
+    <script src="game.js"></script>
+</body>
+</html>
