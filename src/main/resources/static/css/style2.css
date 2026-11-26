@@ -13,7 +13,7 @@
        background: #f7f3e8;
    }
 
-/* 보물상자 제목 */
+   /* 보물상자 제목 */
    .game-header {
        display: flex;
        justify-content: space-between;
@@ -29,17 +29,17 @@
        border-radius: 999px;
        font-weight: bold;
    }
-
-/* 보물상자를 한군데 모아두는 곳 */
+/* 
+    보물상자를 한군데 모아두는 곳 
    .treasure-row {
-       /* 가로배치 */
+        가로배치 
        display: flex;
        justify-content: center;
 
        gap: 25px;
-   }
-   
-/* 보물상자 */
+   } */
+
+   /* 보물상자 */
    .treasure {
        width: 240px;
        height: 160px;
@@ -50,4 +50,21 @@
        line-height: 160px;
        font-size: 24px;
        font-weight: bold;
+   }
+
+   .quiz-grid {
+       display: grid;
+       /* 1줄의 컬럼수를 3열로 배치 */
+       grid-template-columns: repeat(3, 1fr);
+       
+   }
+
+   .treasure-card {
+       min-height: 110px;
+       border: 3px solid #8b4513;
+       border-radius: 16px;
+       background: #f6c445;
+       font-size: 20px;
+       font-weight: bold;
+       cursor: pointer;
    }
