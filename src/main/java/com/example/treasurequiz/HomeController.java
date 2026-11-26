@@ -12,7 +12,7 @@ public class HomeController {
         return "index1";
     }
 
-    // http://localhost:8080/index1 로 접속하면 index1.html을 보여줌
+    // http://localhost:80/index1 로 접속하면 index1.html을 보여줌
     @GetMapping("/index1")
     public String index1() {
         return "index1";
