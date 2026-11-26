@@ -1,0 +1,53 @@
+   /* 외부 스타일시트 */
+
+   /* body 태그에 적용 */
+
+   * {
+       box-sizing: border-box;
+   }
+
+   body {
+
+       font-family: Arial, sans-serif;
+       padding: 24px;
+       background: #f7f3e8;
+   }
+
+/* 보물상자 제목 */
+   .game-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 16px;
+       margin-bottom: 24px;
+   }
+
+   .score-badge {
+       padding: 12px 18px;
+       background: #fff2bf;
+       border: 2px solid #d49b24;
+       border-radius: 999px;
+       font-weight: bold;
+   }
+
+/* 보물상자를 한군데 모아두는 곳 */
+   .treasure-row {
+       /* 가로배치 */
+       display: flex;
+       justify-content: center;
+
+       gap: 25px;
+   }
+   
+/* 보물상자 */
+   .treasure {
+       width: 240px;
+       height: 160px;
+       background-color: #f6c445;
+       border: 6px solid #8b4513;
+       border-radius: 24px;
+       text-align: center;
+       line-height: 160px;
+       font-size: 24px;
+       font-weight: bold;
+   }
