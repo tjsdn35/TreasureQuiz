@@ -29,7 +29,8 @@
        border-radius: 999px;
        font-weight: bold;
    }
-/* 
+
+   /* 
     보물상자를 한군데 모아두는 곳 
    .treasure-row {
         가로배치 
@@ -58,9 +59,9 @@
        grid-template-columns: repeat(3, 1fr);
        gap: 12px;
        grid-auto-rows: 130px;
-       
-   }
 
+   }
+    
    .treasure-card {
        min-height: 110px;
        border: 3px solid #8b4513;
@@ -69,4 +70,37 @@
        font-size: 20px;
        font-weight: bold;
        cursor: pointer;
-   }
+    }
+    
+    /* class="treasure-card special" 용 특별설정 */
+    .treasure-card.special {
+        grid-column: span 2;
+        background: #ffdf70;
+       border-color: #c48612;
+    }
+    
+    .treasure-card.open {
+        background: #fff2bf;
+        border-color: #d49b24;
+        transform: scale(1.02);
+    }
+    
+     .treasure-card1 {
+       min-height: 110px;
+       border: 5px solid #8b4513;
+       border-radius: 16px;
+       background: #f6c445;
+       font-size: 20px;
+       font-weight: bold;
+       cursor: pointer;
+    }
+
+     .treasure-card2 {
+       min-height: 110px;
+       border: 10px solid #8b4513;
+       border-radius: 16px;
+       background: #f6c445;
+       font-size: 20px;
+       font-weight: bold;
+       cursor: pointer;
+    }

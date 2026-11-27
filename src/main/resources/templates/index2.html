@@ -3,23 +3,24 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>보물섬 퀴즈 탐험</title>
-    <link rel="stylesheet" href="/css/style2.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>보물섬 퀴즈 탐험</title>
+   <link rel="stylesheet" href="/css/style2.css">
 
 </head>
 
 <body>
 
-    <!-- 제목영역 -->
-    <header class="game-header">
-        <h1>🏝️ 보물섬 퀴즈 탐험 🏝️</h1>
-        <div class="score-badge">⭐ 점수: 0 점 ⭐</div>
-    </header>
+   <!-- 제목영역 -->
+
+   <header class="game-header">
+      <h1>🏝️ 보물섬 퀴즈 탐험 🏝️</h1>
+      <div class="score-badge">⭐ 점수: 0 점 ⭐</div>
+   </header>
 
 
-    <!-- 
+   <!-- 
         한군데 모아서 적용 
     <div class="treasure-row">
         <div class="treasure"> 보석 </div>
@@ -28,36 +29,58 @@
     </div> 
     -->
 
-    <main class="quiz-grid">
-        
-        <button class="treasure-card"
-             data-index="0"> ⚜ 보물 1 ⚜ </button>
+   <main class="quiz-grid">
 
-         <button class="treasure-card"
-             data-index="1"> ⚜ 보물 2 ⚜ </button>
+      <button onclick="alert('스페셜 버튼 클릭')"
+      class="treasure-card special" 
+      data-index="0"> ⚜ 보물 1 ⚜ </button>
 
-          <button class="treasure-card"
-             data-index="2"> ⚜ 보물 3 ⚜ </button>
+      <button onclick="alert('짝 짝 짝! 1번 오픈')"
+       class="treasure-card1"
+       data-index="1"> ⚜ 보물 2 ⚜ </button>
 
-          <button class="treasure-card"
-             data-index="3"> ⚜ 보물 4 ⚜ </button>
+      <button onclick="alert('짝 짝 짝! 2번 오픈')"
+      class="treasure-card2" 
+      data-index="2"> ⚜ 보물 3 ⚜ </button>
 
-          <button class="treasure-card"
-             data-index="4"> ⚜ 보물 5 ⚜ </button>
+      <button class="treasure-card" 
+      data-index="3"> ⚜ 보물 4 ⚜ </button>
 
-          <button class="treasure-card"
-             data-index="5"> ⚜ 보물 6 ⚜ </button>
+      <button class="treasure-card" 
+      data-index="4"> ⚜ 보물 5 ⚜ </button>
 
-          <button class="treasure-card"
-             data-index="6"> ⚜ 보물 7 ⚜ </button>
+      <button class="treasure-card" 
+      data-index="5"> ⚜ 보물 6 ⚜ </button>
 
-          <button class="treasure-card"
-             data-index="7"> ⚜ 보물 8 ⚜ </button>
+      <button class="treasure-card" 
+      data-index="6"> ⚜ 보물 7 ⚜ </button>
 
-          <button class="treasure-card"
-             data-index="8"> ⚜ 보물 9 ⚜ </button>
+      <button class="treasure-card" 
+      data-index="7"> ⚜ 보물 8 ⚜ </button>
 
-    </main>
+      <button class="treasure-card" 
+      data-index="8"> ⚜ 보물 9 ⚜ </button>
+
+   </main>
+
+   <!-- 보물상자들 중에 하나를 누르면 
+            질문이 나타는 코드를 추가-->
+
+   <section class="question-panel">
+      
+      <h2> 보물상자별 <strong>🔱 오늘의 퀴즈 🔱</strong> </h2>
+      <!-- 문제를 보여줄 패널 p태그 -->
+      <p id="question-text">보물상자를 선택해 문제를 시작하세요!</p>
+   
+   </section>
+
+   <!-- 홈페이지 문서의 실행순서
+    1. HTML 요소를 화면에 만든다
+    2. CSS 스타일을 불러온다
+    3. HTML 요소가 완전히 완성되어야 한다
+    4. 자바스크립트가 실행된다. -->
+   
+    <script src="/js/game1.js"></script> 
 
 </body>
 
