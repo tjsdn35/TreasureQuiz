@@ -28,23 +28,56 @@
         <div class="treasure"> 보물지도 </div>
     </div> 
     -->
+    <!-- main태그 위에 
+      <script>
+         
+         function notify(i) {
+            // 동적 문자열 만들기
+            // 1. 동적 문자열은 무조건 `...`구성
+            // 2. `안년하세요! {변수명}` =>
+            // 3. "안녕하세요! 변수내용이 출력"
+            // 4. {가변데이터} => 정적데이터로 생성
+            // 5. " 변환된 정적 문자열 "
+            // 6. 가변문자열은 `${변수명}입니다.` 형식
+            let msg = `${i} 번쨰 버튼을 눌렸어요.`;
+            alert(msg)
+         }
+  
+      </script> -->
 
    <main class="quiz-grid">
 
-      <button onclick="alert('스페셜 버튼 클릭')"
+      <button onclick="notify(0)"
       class="treasure-card special" 
       data-index="0"> ⚜ 보물 1 ⚜ </button>
 
-      <button onclick="alert('짝 짝 짝! 1번 오픈')"
+      <button onclick="notify(1)"
        class="treasure-card1"
        data-index="1"> ⚜ 보물 2 ⚜ </button>
 
-      <button onclick="alert('짝 짝 짝! 2번 오픈')"
+      <button onclick="notify(2)"
       class="treasure-card2" 
       data-index="2"> ⚜ 보물 3 ⚜ </button>
 
-      <button class="treasure-card" 
+      <button onclick="notify(3)"
+      class="treasure-card" 
       data-index="3"> ⚜ 보물 4 ⚜ </button>
+<!--
+      <button onclick="notify(0)"
+      class="treasure-card special" 
+      data-index="0"> ⚜ 보물 1 ⚜ </button>
+
+      <button onclick="notify(1)"
+       class="treasure-card1"
+       data-index="1"> ⚜ 보물 2 ⚜ </button>
+
+      <button onclick="notify(2)"
+      class="treasure-card2" 
+      data-index="2"> ⚜ 보물 3 ⚜ </button>
+
+      <button onclick="notify(3)"
+      class="treasure-card" 
+      data-index="3"> ⚜ 보물 4 ⚜ </button>  -->
 
       <button class="treasure-card" 
       data-index="4"> ⚜ 보물 5 ⚜ </button>
@@ -73,6 +106,24 @@
       <p id="question-text">보물상자를 선택해 문제를 시작하세요!</p>
    
    </section>
+<!-- 여기 놔두어도 실행되는지 notify 실험 -->
+    <script>
+         
+         function notify(i) {
+            // 동적 문자열 만들기
+            // 1. 동적 문자열은 무조건 `...`구성
+            // 2. `안년하세요! {변수명}` =>
+            // 3. "안녕하세요! 변수내용이 출력"
+            // 4. {가변데이터} => 정적데이터로 생성
+            // 5. " 변환된 정적 문자열 "
+            // 6. 가변문자열은 `${변수명}입니다.` 형식
+            let msg = `${i} 번쨰 버튼을 눌렸어요.`;
+            alert(msg)
+         }
+         let say = notify; // 함수이름을 변수처럼 사용
+         say (5);
+  
+      </script>
 
    <!-- 홈페이지 문서의 실행순서
     1. HTML 요소를 화면에 만든다
