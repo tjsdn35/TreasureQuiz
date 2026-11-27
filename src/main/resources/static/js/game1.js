@@ -41,13 +41,76 @@ cards.forEach(
     });
 }); */
 
-const cards = document.querySelectorAll(".treasure-card"); 
+const cards = document.querySelectorAll(".treasure-card");
 const questionText = document.querySelector("#question-text");
+const choicesArea = document.querySelector("#choices");
+const feedback = document.querySelector("#feedback");
+
+const questionBank = [
+    { question: "Flexbox를 켜는 코드는?", choices:
+            ["display:flex", "display:grid", "flex:color"],
+        answer: 0 },
+
+    { question: "가로 가운데 정렬 속성은?", choices:
+            ["align-items", "justify-content", "gap"],
+        answer: 1 },
+
+    { question: "기본 row에서 세로 정렬 속성은?", choices:
+            ["align-items", "width", "border"],
+        answer: 0 },
+
+    { question: "Flexbox 아이템을 세로로 배치하는 코드는?", choices:
+            ["flex-direction: column", "justify-content", "align-items"],
+        answer: 0 },
+
+    { question: "Grid를 켜는 코드는?", choices:
+            ["display:grid", "display:flex", "grid:on"],
+        answer: 0 },
+
+    { question: "같은 너비 3열을 만드는 코드는?", choices:
+            ["repeat(3, 1fr)", "repeat(1, 3px)", "3fr(1)"],
+        answer: 0 },
+
+    { question: "Grid 칸 사이 간격 속성은?", choices:
+            ["gap", "border", "height"],
+        answer: 0 },
+
+    { question: "두 열을 차지하게 하는 코드는?", choices:
+            ["grid-column: span 2", "grid-row: span 0", "column: large"],
+        answer: 0 },
+
+    { question: "버튼 클릭 동작을 연결하는 것은?", choices:
+            ["addEventListener", "grid-template", "border-radius"],
+        answer: 0 }
+];
+
+function showQuestion(card) {
+    const index = Number(card.dataset.index);
+    const question = questionBank[index];
+
+    questionText.textContent = question.question;
+    choicesArea.innerHTML = "";
+    feedback.textContent = "";
+
+    question.choices.forEach(function (choice, choiceIndex) {
+        const button = document.createElement("button");
+        button.textContent = choice;
+        button.className = "choice-button";
+
+        button.addEventListener("click", function () {
+            if (choiceIndex === question.answer) {
+                feedback.textContent = "        정답이에요!";
+            } else {
+                feedback.textContent = "아쉬워요. 다시 생각해 보세요.";
+            }
+        });
+
+        choicesArea.appendChild(button);
+    });
+}
 
 cards.forEach(function (card) {
     card.addEventListener("click", function () {
-        card.classList.add("open");
-        questionText.textContent = "문제가 열렸어요! 정답을 생각해 보세요.";
+        showQuestion(card);
     });
 }); 
-
