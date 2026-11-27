@@ -61,7 +61,7 @@
        grid-auto-rows: 130px;
 
    }
-    
+
    .treasure-card {
        min-height: 110px;
        border: 3px solid #8b4513;
@@ -70,22 +70,22 @@
        font-size: 20px;
        font-weight: bold;
        cursor: pointer;
-    }
-    
-    /* class="treasure-card special" 용 특별설정 */
-    .treasure-card.special {
-        grid-column: span 2;
-        background: #ffdf70;
+   }
+
+   /* class="treasure-card special" 용 특별설정 */
+   .treasure-card.special {
+       grid-column: span 2;
+       background: #ffdf70;
        border-color: #c48612;
-    }
-    
-    .treasure-card.open {
-        background: #fff2bf;
-        border-color: #d49b24;
-        transform: scale(1.02);
-    }
-    
-     .treasure-card1 {
+   }
+
+   .treasure-card.open {
+       background: #fff2bf;
+       border-color: #d49b24;
+       transform: scale(1.02);
+   }
+/*
+   .treasure-card1 {
        min-height: 110px;
        border: 5px solid #8b4513;
        border-radius: 16px;
@@ -93,9 +93,9 @@
        font-size: 20px;
        font-weight: bold;
        cursor: pointer;
-    }
+   }
 
-     .treasure-card2 {
+   .treasure-card2 {
        min-height: 110px;
        border: 10px solid #8b4513;
        border-radius: 16px;
@@ -103,4 +103,32 @@
        font-size: 20px;
        font-weight: bold;
        cursor: pointer;
-    }
+   }
+*/
+   .question-panel {
+       margin-top: 24px;
+       padding: 20px;
+       background: #ffffff;
+       border: 3px solid #d49b24;
+       border-radius: 16px;
+   }
+
+   #choices {
+       display: flex;
+       gap: 10px;
+       margin: 16px 0;
+   }
+
+   .choice-button {
+       padding: 10px 16px;
+       background: #fff2bf;
+       border: 2px solid #8b4513;
+       border-radius: 10px;
+       font-size: 16px;
+       font-weight: bold;
+       cursor: pointer;
+   }
+
+   .choice-button:hover {
+       background: #f6c445;
+   }

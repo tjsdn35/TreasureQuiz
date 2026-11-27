@@ -85,6 +85,7 @@ const questionBank = [
 ];
 
 function showQuestion(card) {
+    card.classList.add("open");
     const index = Number(card.dataset.index);
     const question = questionBank[index];
 
