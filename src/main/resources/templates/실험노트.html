@@ -124,15 +124,19 @@
       <button class="treasure-card" 
       data-index="8"> ⚜ 보물 9 ⚜ </button>
 
-   
    </main>
 
    <script>
-     
+     let treasureCard = 
+         document.querySelector(".treasure-card");
+      treasureCard.forEach()
      let treasure_card_special_find =
        document.querySelector(".treasure-card.special");
       treasure_card_special_find.textContent = 
       "Eureka! 스페셜 보물을 찾았어"
+      
+      treasure_card_special_find.addEventListener("click", say)
+                say(0);
 
    </script>
 
